@@ -145,8 +145,16 @@ SELECT nome from clientes where nome LIKE "Francisco_%";
 SELECT nome from clientes where nome LIKE "__%";
 
 
-
-
+-- -------------------------------- 15/08
+-- Buscar as primeiras 5 encomendas, juntando duas tabelas: encomendas e clientes.
+SELECT clientes.nome, encomendas * FROM clientes, encomendas WHERE clientes.id = encomendas.id_clientes LIMIT 5;
+ 
+-- Mesma query com ALIAS
+SELECT c.nome, e. * FROM clientes c, ecomendas e WHERE c.id = e.id_cliente LIMIT 5;
+ 
+-- Concatenação entre as colunas CONCAT
+SELECT CONCAT('O meu nome é ', nome, 'e meu email é: ', email) frase FROM clientes LIMIT 10;
+ 
 
  
 --CRUD
