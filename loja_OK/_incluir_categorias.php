@@ -13,7 +13,7 @@
 include 'conexao.php';
 $desc_categoria = $_POST['desc_categoria'];
 $sql = "INSERT INTO categorias (desc_categoria) VALUES ('$desc_categoria')";
-echo($sql);
+// echo($sql);
 $inserir =mysqli_query($conexao,$sql);
 ?>
 
